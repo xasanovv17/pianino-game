@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b0620">
+<title>Neon Tiles — Piano o'yini</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="game"></canvas>
+
+  <!-- O'yin paytidagi HUD -->
+  <div id="hud" class="hidden">
+    <div class="hud-top">
+      <button id="btnPause" class="icon-btn" aria-label="Pauza">❚❚</button>
+      <div class="score-box">
+        <div id="score">0</div>
+        <div id="progressText"></div>
+      </div>
+      <div class="tps-box"><b id="tpsNow">0</b><span>urish/s</span></div>
+    </div>
+    <div class="progress"><i id="progressBar"></i></div>
+    <div class="hud-stats">
+      <span>Maks: <b id="tpsMax">0</b></span>
+      <span>O'rtacha: <b id="tpsAvg">0.0</b></span>
+      <span>Tezlik: <b id="speedMul">×1.00</b></span>
+    </div>
+  </div>
+
+  <!-- Bosh menyu -->
+  <section id="menu" class="screen">
+    <div class="logo">NEON<span>TILES</span></div>
+    <div class="tagline">Qora plitkalarni bos — musiqa o'zi chalinadi</div>
+
+    <div class="user-chip">
+      <span class="avatar">👤</span>
+      <span id="userName">Mehmon</span>
+      <button id="btnProfile" class="link-btn">Profil ochish</button>
+    </div>
+
+    <h3 class="label">Musiqa</h3>
+    <div id="songList" class="song-list"></div>
+
+    <h3 class="label">Qiyinlik</h3>
+    <div id="diffList" class="seg"></div>
+
+    <button id="btnPlay" class="btn primary big-btn">▶ O'ynash</button>
+    <p class="hint">Kompyuterda: <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> &nbsp;·&nbsp; Telefonda: plitkaga tegiz</p>
+
+    <h3 class="label">Reyting (shu qurilmada)</h3>
+    <div id="board" class="board"></div>
+  </section>
+
+  <!-- Profil ochasizmi? -->
+  <section id="ask" class="screen modal hidden">
+    <div class="card">
+      <div class="emoji">🎵</div>
+      <h2>Profil ochasizmi?</h2>
+      <p>Profil ochsangiz rekordingiz va tezligingiz (urish/soniya) saqlanadi.</p>
+      <div class="btns row">
+        <button id="askYes" class="btn primary">Ha</button>
+        <button id="askNo" class="btn ghost">Yo'q</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ism familya -->
+  <section id="form" class="screen modal hidden">
+    <form class="card" id="profileForm" autocomplete="off">
+      <h2>Profil ochish</h2>
+      <label>Ism
+        <input id="inName" type="text" maxlength="20" placeholder="Masalan: Ali" required>
+      </label>
+      <label>Familya
+        <input id="inSurname" type="text" maxlength="24" placeholder="Masalan: Valiyev" required>
+      </label>
+      <div id="formErr" class="err"></div>
+      <div class="btns row">
+        <button type="submit" class="btn primary">Davom etish</button>
+        <button type="button" id="formBack" class="btn ghost">Orqaga</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Pauza -->
+  <section id="pause" class="screen modal hidden">
+    <div class="card">
+      <h2>Pauza</h2>
+      <div class="btns">
+        <button id="btnResume" class="btn primary">Davom etish</button>
+        <button id="btnRestart" class="btn ghost">Qaytadan boshlash</button>
+        <button id="btnPauseMenu" class="btn ghost">Menyu</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- O'yin tugadi -->
+  <section id="over" class="screen modal hidden">
+    <div class="card">
+      <h2 id="overTitle">O'yin tugadi</h2>
+      <div id="overScore" class="big-score">0</div>
+      <div id="overBadge" class="badge hidden">🏆 Yangi rekord!</div>
+      <div id="overStats" class="stats-grid"></div>
+      <p id="guestNote" class="note hidden">Mehmon sifatida o'ynadingiz — natijalar saqlanmadi.</p>
+      <div class="btns">
+        <button id="btnRetry" class="btn primary">Qayta o'ynash</button>
+        <button id="btnOverProfile" class="btn ghost hidden">Profil ochish</button>
+        <button id="btnToMenu" class="btn ghost">Menyu</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
