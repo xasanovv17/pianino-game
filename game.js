@@ -28,27 +28,27 @@ function parse(str) {
 
 const SONGS = [
   {
-    id: 'ode', name: 'Quvonch madhiyasi', sub: 'Beethoven · oson', emoji: '🎹', bpm: 112, hue: 255,
+    id: 'ode', name: 'Quvonch madhiyasi', sub: 'Beethoven · oson', bpm: 112, hue: 255,
     notes: parse(`E4:1 E4:1 F4:1 G4:1 G4:1 F4:1 E4:1 D4:1 C4:1 C4:1 D4:1 E4:1 E4:1.5 D4:.5 D4:2
       E4:1 E4:1 F4:1 G4:1 G4:1 F4:1 E4:1 D4:1 C4:1 C4:1 D4:1 E4:1 D4:1.5 C4:.5 C4:2
       D4:1 D4:1 E4:1 C4:1 D4:1 E4:.5 F4:.5 E4:1 C4:1 D4:1 E4:.5 F4:.5 E4:1 D4:1 C4:1 D4:1 G3:2
       E4:1 E4:1 F4:1 G4:1 G4:1 F4:1 E4:1 D4:1 C4:1 C4:1 D4:1 E4:1 D4:1.5 C4:.5 C4:2`),
   },
   {
-    id: 'twinkle', name: 'Yulduzcha', sub: 'Twinkle Twinkle · oson', emoji: '⭐', bpm: 104, hue: 205,
+    id: 'twinkle', name: 'Yulduzcha', sub: 'Twinkle Twinkle · oson', bpm: 104, hue: 205,
     notes: parse(`C4:1 C4:1 G4:1 G4:1 A4:1 A4:1 G4:2 F4:1 F4:1 E4:1 E4:1 D4:1 D4:1 C4:2
       G4:1 G4:1 F4:1 F4:1 E4:1 E4:1 D4:2 G4:1 G4:1 F4:1 F4:1 E4:1 E4:1 D4:2
       C4:1 C4:1 G4:1 G4:1 A4:1 A4:1 G4:2 F4:1 F4:1 E4:1 E4:1 D4:1 D4:1 C4:2`),
   },
   {
-    id: 'jingle', name: 'Jingle Bells', sub: 'Yangi yil · o\'rta', emoji: '🔔', bpm: 134, hue: 150,
+    id: 'jingle', name: 'Jingle Bells', sub: 'Yangi yil · o\'rta', bpm: 134, hue: 150,
     notes: parse(`E4:1 E4:1 E4:2 E4:1 E4:1 E4:2 E4:1 G4:1 C4:1.5 D4:.5 E4:4
       F4:1 F4:1 F4:1.5 F4:.5 F4:1 E4:1 E4:1 E4:.5 E4:.5 E4:1 D4:1 D4:1 E4:1 D4:2 G4:2
       E4:1 E4:1 E4:2 E4:1 E4:1 E4:2 E4:1 G4:1 C4:1.5 D4:.5 E4:4
       F4:1 F4:1 F4:1.5 F4:.5 F4:1 E4:1 E4:1 E4:.5 E4:.5 G4:1 G4:1 F4:1 D4:1 C4:4`),
   },
   {
-    id: 'elise', name: 'Fur Elise', sub: 'Beethoven · qiyin', emoji: '🌹', bpm: 126, hue: 325,
+    id: 'elise', name: 'Fur Elise', sub: 'Beethoven · qiyin', bpm: 126, hue: 325,
     notes: parse(`E5:.5 D#5:.5 E5:.5 D#5:.5 E5:.5 B4:.5 D5:.5 C5:.5 A4:1.5 C4:.5 E4:.5 A4:.5 B4:1.5
       E4:.5 G#4:.5 B4:.5 C5:1.5 E4:.5 E5:.5 D#5:.5 E5:.5 D#5:.5 E5:.5 B4:.5 D5:.5 C5:.5 A4:1.5
       C4:.5 E4:.5 A4:.5 B4:1.5 E4:.5 C5:.5 B4:.5 A4:2
